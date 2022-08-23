@@ -29,9 +29,30 @@ Console.WriteLine(CountEven(RandomArray(size)));
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6] -> 0
 
+/*
+int size = new Random().Next(1, 10);
 
+int[] RandomArray (int length)
+{
+    int[] array = new int[length];
+    for(int i = 0; i < length; i++)
+        array[i] = new Random().Next(0, 1000);
+    return array;
+}
 
+int SummOddIndex (int[] arr)
+{
+    int result = 0;
+    for(int i = 0; i < arr.Length; i++)
+    {
+        if (i % 2 == 1)
+            result += arr[i];
+    }
+    return result;
+}
 
+Console.WriteLine(SummOddIndex(RandomArray(size)));
+*/
 
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 // [3 7 22 2 78] -> 76
