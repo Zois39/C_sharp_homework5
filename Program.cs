@@ -85,14 +85,16 @@ int size = new Random().Next(1, 10);
 
 double[] RandomArray (int length)
 {
+    // creates an array of random real numbers of an length
     double[] array = new double[length];
     for(int i = 0; i < length; i++)
-        array[i] = new Random().Next(-1000, 1000) + new Random().NextDouble();
+        array[i] = new Random().Next(-999, 1000) + new Random().NextDouble();
     return array;
 }
 
 double DiffMaxMin (double[] arr)
 {
+    // finds the difference between the maximum and minimum values ​​of an array
     double result = 0;
     double min = arr[0];
     double max = arr[0];
@@ -106,5 +108,18 @@ double DiffMaxMin (double[] arr)
     result = max - min;
     return result;
 }
-Console.WriteLine(DiffMaxMin(RandomArray(size)));
+
+void ShowArray(double[] array)
+{
+    // Show all elements of array
+    Console.Write("Array:");
+    for(int i = 0; i < array.Length; i++)
+        Console.Write($" {array[i]}");
+    Console.WriteLine();
+}
+
+double[] newArray = RandomArray(size);
+ShowArray(newArray);
+Console.WriteLine($"Difference between the maximum and minimum: {DiffMaxMin(newArray)}");
 */
+
