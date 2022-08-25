@@ -46,24 +46,35 @@ int size = new Random().Next(1, 10);
 
 int[] RandomArray (int length)
 {
+    // creates an array with values from -999 to 999 of a given length
     int[] array = new int[length];
     for(int i = 0; i < length; i++)
-        array[i] = new Random().Next(0, 1000);
+        array[i] = new Random().Next(-999, 1000);
     return array;
 }
 
 int SummOddIndex (int[] arr)
 {
+    // find summ elements of odd Index of a given array
     int result = 0;
     for(int i = 0; i < arr.Length; i++)
-    {
         if (i % 2 == 1)
             result += arr[i];
-    }
     return result;
 }
 
-Console.WriteLine(SummOddIndex(RandomArray(size)));
+void ShowArray(int[] array)
+{
+    // Show all elements of array
+    Console.Write("Array:");
+    for(int i = 0; i < array.Length; i++)
+        Console.Write($" {array[i]}");
+    Console.WriteLine();
+}
+
+int[] newArray = RandomArray(size);
+ShowArray(newArray);
+Console.WriteLine($"Summ elements with odd positions: {SummOddIndex(newArray)}");
 */
 
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
